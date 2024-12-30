@@ -80,7 +80,7 @@ body {
   animation-name: shake;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
-  animation-fill-mode: forward;
+  animation-fill-mode: both;
   transform-origin: bottom right;
 }
 
@@ -91,9 +91,6 @@ body {
 
   75% {
     transform: rotate(10deg);
-  }
-  100% {
-    transform: rotate(0deg);
   }
 }
 
