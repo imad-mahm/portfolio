@@ -121,7 +121,7 @@ a:hover {
 
 /*creating the shake animation*/
 
-#wave:hover {
+#welcome:hover #wave{
   animation-name: shake;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
