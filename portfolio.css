@@ -8,19 +8,21 @@ body {
 }
 
 .even-section {
+  background-color: #66fcf1;
+  color: #0b0c10;
+  height: fit-content;
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+}
+
+.odd-section {
   background-color: #0b0c10;
   color: #66fcf1;
   height: fit-content;
   min-height: 100vh;
   width: 100%;
-}
-
-.odd-section {
-  background-color: #45a29e;
-  color: #0b0c10;
-  height: fit-content;
-  min-height: 100vh;
-  width: 100%;
+  padding: 20px;
 }
 
 #nav {
@@ -34,7 +36,12 @@ body {
   z-index: 2;
 }
 
-a {
+.currentsection {
+  background-color: #0b0c10;
+  color: #66fcf1;
+}
+
+.nav-buttons {
   font-size: 280%;
   text-decoration: none;
   padding-left: 15px;
@@ -43,8 +50,27 @@ a {
   color: #45a29e;
 }
 
-a:hover {
+.nav-buttons:hover {
+  animation-name: navOnHover;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes navOnHover {
+  0% {
+    background-color: #c5c6c7;
+    color: #45a29e;
+  }
+  100% {
+    background-color: #0b0c10;
+    color: #66fcf1;
+  }
+}
+
+.currentSection {
   background-color: #0b0c10;
+  color: #66fcf1;
 }
 
 #home {
@@ -68,10 +94,10 @@ a:hover {
   margin-right: auto;
   display: block;
   margin-top: 50px;
-  background-color: black;
+  background-color: #c6c7c8;
   width: fit-content;
   height: fit-content;
-  border: 20px solid black;
+  border: 20px solid #c6c7c8;
   text-align: center;
 }
 
@@ -82,7 +108,7 @@ a:hover {
   margin-top: 30px;
   width: 150px;
   border-radius: 50%;
-  border: 15px solid black;
+  border: 15px solid #45a29e;
 }
 
 #name {
@@ -91,18 +117,18 @@ a:hover {
   font-family: monospace, sans-serif;
   position: relative;
   text-align: center;
-  color: black;
 }
 
 #helloworld {
   margin: 0px;
   font-size: 500%;
-  color: green;
+  color: #45a29e;
 }
 
-.sub-titles {
+.sec-titles {
   font-size: 700%;
   padding: 2%;
+  margin: 0px;
 }
 
 .description {
@@ -119,16 +145,15 @@ a:hover {
   text-align: center;
 }
 
-/*creating the shake animation*/
-
-#welcome:hover #wave{
-  animation-name: shake;
+#wave:hover {
+  animation-name: wave;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
   transform-origin: bottom right;
+  animation-timing-function: linear;
 }
 
-@keyframes shake {
+@keyframes wave {
   0% {
     transform: rotate(0deg);
   }
@@ -148,4 +173,70 @@ a:hover {
   margin-top: 2%;
   width: 8em;
   float: left;
+  border-radius: 50%;
+}
+
+.project {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  width: 80%;
+  height: auto;
+  border-radius: 100px;
+  background-color: #0b0c10;
+  display: flex;
+  flex-direction: row;
+}
+
+.screenshot {
+  object-fit: fill;
+  max-width: 50%;
+  height: auto;
+  vertical-align: top;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+
+.project-desc {
+  text-align: center;
+}
+
+.project-desc p {
+  font-size: 2em;
+  padding: 20px;
+  vertical-align: top;
+  width: 90%;
+  color: #c6c7c8;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  background-color: #66fcf1;
+  color: #0b0c10;
+  width: 45%;
+  height: 1.5em;
+  margin: 10px auto;
+  text-decoration: none;
+  border-radius: 100px;
+}
+
+.links:hover {
+  animation-name: glow-on-hover;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
+@keyframes glow-on-hover {
+  0% {
+    background-color: #66fcf1;
+    color: #0b0c10;
+  }
+  100% {
+    background-color: #45a29e;
+    color: #0b0c10;
+  }
 }
