@@ -13,7 +13,8 @@ body {
   height: fit-content;
   min-height: 100vh;
   width: 100%;
-  padding: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .odd-section {
@@ -22,7 +23,6 @@ body {
   height: fit-content;
   min-height: 100vh;
   width: 100%;
-  padding: 20px;
 }
 
 #nav {
@@ -145,7 +145,7 @@ body {
   text-align: center;
 }
 
-#wave:hover {
+#welcome:hover p {
   animation-name: wave;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
@@ -202,7 +202,7 @@ body {
 }
 
 .project-desc p {
-  font-size: 2em;
+  font-size: 1.7em;
   padding: 20px;
   vertical-align: top;
   width: 90%;

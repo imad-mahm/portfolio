@@ -7,10 +7,7 @@ const helloWorld = document.getElementById("helloworld");
 const intro_name = document.getElementById("name");
 
 let timeout;
-window.addEventListener("scroll", () => {
-  clearTimeout(timeout);
-  timeout = setTimeout(checkCurrentSection, 100);
-});
+window.addEventListener("scroll", checkCurrentSection);
 
 function checkCurrentSection() {
   const scrollPosition = window.scrollY;
@@ -48,3 +45,5 @@ animate_Text(helloWorld, "Hello World!", 0);
 setTimeout(() => {
   animate_Text(intro_name, "My name is Imad Mahmoud.", 0);
 }, 1000);
+
+checkCurrentSection();
