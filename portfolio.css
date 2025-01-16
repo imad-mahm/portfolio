@@ -132,7 +132,8 @@ body {
 }
 
 .description {
-  font-size: 200%;
+  display: inline-block;
+  font-size: 3em;
   margin-left: 10%;
   margin-right: 10%;
   max-width: 80%;
@@ -236,7 +237,46 @@ body {
     color: #0b0c10;
   }
   100% {
-    background-color: #45a29e;
+    background-color: #00ffff;
     color: #0b0c10;
+  }
+}
+
+.langs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 50px 200px;
+}
+
+.langs div {
+  text-align: center;
+  padding: 30px;
+}
+
+.langs div h3 {
+  font-weight: 900;
+  font-size: 2em;
+}
+
+.lang-icon {
+  display: inline;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+
+.lang-icon:hover {
+  animation-name: zoom;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(120%);
   }
 }

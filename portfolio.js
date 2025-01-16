@@ -6,12 +6,10 @@ const nav = document.getElementsByClassName("nav-buttons");
 const helloWorld = document.getElementById("helloworld");
 const intro_name = document.getElementById("name");
 
-let timeout;
 window.addEventListener("scroll", checkCurrentSection);
 
 function checkCurrentSection() {
   const scrollPosition = window.scrollY;
-  const homeHeight = sectionHome.offsetTop;
   const aboutHeight = sectionAbout.offsetTop;
   const projectsHeight = sectionProjects.offsetTop;
   const skillsHeight = sectionSkills.offsetTop;
